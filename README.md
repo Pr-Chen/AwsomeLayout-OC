@@ -5,7 +5,7 @@
 ![](https://ww1.sinaimg.cn/large/006tNbRwly1fd8v3d0ax0g305k09v48q.gif)
 
 ## 用法简单
-```
+```objective-c
 CardLayOut *layout = [CardLayOut new];
 self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
 ```
