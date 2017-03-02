@@ -11,7 +11,7 @@ self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds c
 ```
 
 ## 可以设置的属性
-```
+```objective-c
 //cell间距
 @property (nonatomic, assign) CGFloat spacing;
 
