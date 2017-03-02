@@ -1,4 +1,4 @@
-## 卡片布局，支持水平、垂直滚动。
+## 卡片布局，支持水平、垂直滚动。Swift版本请[点击这里](https://github.com/Pr-Chen/CardLayout-Swift)
 ![](https://ww3.sinaimg.cn/large/006tNbRwly1fd8xu377fng305k09vdo5.gif)
 ![](https://ww2.sinaimg.cn/large/006tNbRwly1fd8xu51jf4g305k09vq9x.gif)
 ![](https://ww4.sinaimg.cn/large/006tNbRwly1fd8xug0iejg305k09vdu7.gif)
