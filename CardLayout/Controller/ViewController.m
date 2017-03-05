@@ -23,6 +23,8 @@
     [super viewDidLoad];
     
     CardLayOut *layout = [CardLayOut new];
+    layout.scale = 1.1;
+    layout.itemSize = CGSizeMake(200, 300);
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.dataSource = self;

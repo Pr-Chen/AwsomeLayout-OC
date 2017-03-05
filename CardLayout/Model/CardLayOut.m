@@ -17,6 +17,7 @@
 @implementation CardLayOut
 
 - (instancetype)init {
+    
     if (self = [super init]) {
         [self defaultSetup];
     }
@@ -24,6 +25,7 @@
 }
 
 - (void)defaultSetup {
+    
     self.spacing = 20.0;
     self.itemSize = CGSizeMake(280, 400);
     self.edgeInset = UIEdgeInsetsMake(20, 20, 20, 20);
@@ -56,6 +58,7 @@
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
+   
     NSArray *attributes = [self attributesInRect:rect];
     
     if (self.scale==1) {
@@ -77,6 +80,7 @@
 }
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+    
     CGRect oldRect = CGRectMake(proposedContentOffset.x, proposedContentOffset.y, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     NSArray *attributes = [self layoutAttributesForElementsInRect:oldRect];
     
@@ -91,7 +95,6 @@
     }
     CGFloat newX = self.scrollDirection==UICollectionViewScrollDirectionHorizontal ? proposedContentOffset.x + minOffset : proposedContentOffset.x;
     CGFloat newY = self.scrollDirection==UICollectionViewScrollDirectionHorizontal ? proposedContentOffset.y : proposedContentOffset.y + minOffset;
-    
     return CGPointMake(newX, newY);
 }
 
@@ -116,28 +119,43 @@
 }
 
 - (void)setSpacing:(CGFloat)spacing {
-    _spacing = spacing;
-    [self invalidateLayout];
+    
+    if (_spacing != spacing) {
+        _spacing = spacing;
+        [self invalidateLayout];
+    }
 }
 
 - (void)setItemSize:(CGSize)itemSize {
-    _itemSize = itemSize;
-    [self invalidateLayout];
+    
+    if (!CGSizeEqualToSize(_itemSize, itemSize)) {
+        _itemSize = itemSize;
+        [self invalidateLayout];
+    }
 }
 
 - (void)setScale:(CGFloat)scale {
-    _scale = scale;
-    [self invalidateLayout];
+    
+    if (_scale != scale) {
+        _scale = scale;
+        [self invalidateLayout];
+    }
 }
 
 - (void)setEdgeInset:(UIEdgeInsets)edgeInset {
-    _edgeInset = edgeInset;
-    [self invalidateLayout];
+    
+    if (UIEdgeInsetsEqualToEdgeInsets(_edgeInset, edgeInset)) {
+        _edgeInset = edgeInset;
+        [self invalidateLayout];
+    }
 }
 
 - (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection {
-    _scrollDirection = scrollDirection;
-    [self invalidateLayout];
+    
+    if (_scrollDirection != scrollDirection) {
+        _scrollDirection = scrollDirection;
+        [self invalidateLayout];
+    }
 }
 
 - (NSMutableArray *)rectAttributes {
