@@ -144,7 +144,7 @@
 
 - (void)setEdgeInset:(UIEdgeInsets)edgeInset {
     
-    if (UIEdgeInsetsEqualToEdgeInsets(_edgeInset, edgeInset)) {
+    if (!UIEdgeInsetsEqualToEdgeInsets(_edgeInset, edgeInset)) {
         _edgeInset = edgeInset;
         [self invalidateLayout];
     }
