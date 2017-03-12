@@ -7,14 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "CardLayOut.h"
+#import "CardLayoutVC.h"
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (strong, nonatomic) UICollectionView *collectionView;
-@property (strong, nonatomic) NSIndexPath *currentIndexPath;
-@property (strong, nonatomic) NSMutableArray *colors;
-
+@interface ViewController ()
+@property (strong, nonatomic) NSArray *demos;
 @end
 
 @implementation ViewController
@@ -22,45 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CardLayOut *layout = [CardLayOut new];
-    layout.scale = 1.1;
-    layout.itemSize = CGSizeMake(200, 300);
+    self.demos = @[
+                   @{@"title":@"卡片布局", @"controller":CardLayoutVC.class},
+                   ];
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.showsVerticalScrollIndicator = NO;
-    self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
-    [self.view addSubview:self.collectionView];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    self.collectionView.frame = self.view.bounds;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.demos.count;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellId"];
+    cell.textLabel.text = self.demos[indexPath.row][@"title"];
     
-    cell.layer.cornerRadius = 5;
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:CGPointMake(scrollView.contentOffset.x+0.5*scrollView.bounds.size.width, 0.5*scrollView.bounds.size.height)];
-    if (!indexPath || self.currentIndexPath == indexPath) {
-        return;
-    }
-    self.currentIndexPath = indexPath;
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Class vcClass = self.demos[indexPath.row][@"controller"];
+    UIViewController *vc = [vcClass new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

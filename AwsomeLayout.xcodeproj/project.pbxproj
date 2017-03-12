@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7417B5621E75997400BDC7F7 /* AdsorptionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417B5611E75997400BDC7F7 /* AdsorptionLayout.m */; };
+		7417B5651E7599D800BDC7F7 /* CardLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417B5641E7599D800BDC7F7 /* CardLayoutVC.m */; };
 		743E49EA1E66C79A0068EB84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 743E49E91E66C79A0068EB84 /* main.m */; };
 		743E49ED1E66C79A0068EB84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 743E49EC1E66C79A0068EB84 /* AppDelegate.m */; };
 		743E49F31E66C79A0068EB84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743E49F11E66C79A0068EB84 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7417B5601E75997400BDC7F7 /* AdsorptionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsorptionLayout.h; sourceTree = "<group>"; };
+		7417B5611E75997400BDC7F7 /* AdsorptionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsorptionLayout.m; sourceTree = "<group>"; };
+		7417B5631E7599D800BDC7F7 /* CardLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutVC.h; sourceTree = "<group>"; };
+		7417B5641E7599D800BDC7F7 /* CardLayoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayoutVC.m; sourceTree = "<group>"; };
 		743E49E51E66C79A0068EB84 /* AwsomeLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwsomeLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		743E49E91E66C79A0068EB84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		743E49EB1E66C79A0068EB84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -96,6 +102,8 @@
 				743E4A001E66C8810068EB84 /* ViewController.h */,
 				743E4A011E66C8810068EB84 /* ViewController.m */,
 				743E49F11E66C79A0068EB84 /* Main.storyboard */,
+				7417B5631E7599D800BDC7F7 /* CardLayoutVC.h */,
+				7417B5641E7599D800BDC7F7 /* CardLayoutVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +113,8 @@
 			children = (
 				743E4A051E66C8E60068EB84 /* CardLayOut.h */,
 				743E4A061E66C8E70068EB84 /* CardLayOut.m */,
+				7417B5601E75997400BDC7F7 /* AdsorptionLayout.h */,
+				7417B5611E75997400BDC7F7 /* AdsorptionLayout.m */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -189,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				743E49ED1E66C79A0068EB84 /* AppDelegate.m in Sources */,
+				7417B5621E75997400BDC7F7 /* AdsorptionLayout.m in Sources */,
 				743E4A041E66C8820068EB84 /* ViewController.m in Sources */,
 				743E4A071E66C8E70068EB84 /* CardLayOut.m in Sources */,
+				7417B5651E7599D800BDC7F7 /* CardLayoutVC.m in Sources */,
 				743E49EA1E66C79A0068EB84 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
