@@ -1,6 +1,6 @@
 //
-//  SFCardLayOut.h
-//  SFCardLayOut
+//  AwsomeLayOut.h
+//  AwsomeLayOut
 //
 //  Created by Chen on 16/1/7.
 //  Copyright © 2016年 陈凯. All rights reserved.

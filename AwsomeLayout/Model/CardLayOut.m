@@ -1,6 +1,6 @@
 //
-//  SFCardLayOut.m
-//  SFCardLayOut
+//  AwsomeLayOut.m
+//  AwsomeLayOut
 //
 //  Created by Chen on 16/1/7.
 //  Copyright © 2016年 陈凯. All rights reserved.
