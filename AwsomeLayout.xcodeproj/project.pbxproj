@@ -42,6 +42,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7417B5581E757B8900BDC7F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		743E49DC1E66C79A0068EB84 = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +71,9 @@
 				743E49EB1E66C79A0068EB84 /* AppDelegate.h */,
 				743E49EC1E66C79A0068EB84 /* AppDelegate.m */,
 				743E49FF1E66C8810068EB84 /* Controller */,
-				743E4A021E66C8820068EB84 /* Model */,
 				743E4A031E66C8820068EB84 /* View */,
+				7417B5581E757B8900BDC7F7 /* Model */,
+				743E4A021E66C8820068EB84 /* Layouts */,
 				743E49E81E66C79A0068EB84 /* Supporting Files */,
 			);
 			path = AwsomeLayout;
@@ -92,13 +100,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		743E4A021E66C8820068EB84 /* Model */ = {
+		743E4A021E66C8820068EB84 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
 				743E4A051E66C8E60068EB84 /* CardLayOut.h */,
 				743E4A061E66C8E70068EB84 /* CardLayOut.m */,
 			);
-			path = Model;
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		743E4A031E66C8820068EB84 /* View */ = {
