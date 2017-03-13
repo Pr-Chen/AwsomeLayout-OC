@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CardLayoutVC.h"
+#import "AdsorptionLayoutVC.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) NSArray *demos;
@@ -20,6 +21,7 @@
     
     self.demos = @[
                    @{@"title":@"卡片布局", @"controller":CardLayoutVC.class},
+                   @{@"title":@"吸附布局", @"controller":AdsorptionLayoutVC.class},
                    ];
     
 }
